@@ -44,7 +44,7 @@ jobs:
       uses: crazy-max/ghaction-container-scan@v3
       with: 
         image: ${{env.ECR_REGISTRY}}/${{env.ECR_REPOSITORY}}:${{env.IMAGE_TAG}}
-        #severity_threshold: CRITICAL
+        severity_threshold: CRITICAL
         severity: CRITICAL
 
     - name: Push Image to ECR
