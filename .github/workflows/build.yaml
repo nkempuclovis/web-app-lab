@@ -39,6 +39,6 @@ jobs:
     - name: Run Trivy vulnerability scanner
       uses: aquasecurity/trivy-action@master
       with: 
-        image: $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
+        image-ref: $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
         severity: CRITICAL
       
