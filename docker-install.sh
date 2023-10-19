@@ -33,4 +33,7 @@ sudo service docker enable
 sudo usermod -a -G docker cyber
 sudo chmod 666 /var/run/docker.sock
 # Run a Test Container
-sudo docker run hello-world
+docker run hello-world
+docker run --name weblab01 -p 80:80 -d nginx
+docker ps
+
