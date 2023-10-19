@@ -29,10 +29,10 @@ jobs:
       uses: aws-actions/amazon-ecr-login@v1
     
     - name: configure AWS ECR Registry and Repository
-      # env:
-      #   ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
-      #   ECR_REPOSITORY: lab-containers
-      #   IMAGE_TAG: nodejs_lab_image
+      env:
+        ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
+        ECR_REPOSITORY: lab-containers
+        IMAGE_TAG: nodejs_lab_image
       run: |
         echo "test" 
       
